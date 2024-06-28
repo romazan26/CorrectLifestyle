@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="GoalStep" representedClassName="GoalStep" syncable="YES" codeGenerationType="class">
+        <attribute name="steps" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="GoalWater" representedClassName="GoalWater" syncable="YES" codeGenerationType="class">
+        <attribute name="water" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Training" representedClassName="Training" syncable="YES" codeGenerationType="class">
+        <attribute name="complited" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="end" optional="YES" attributeType="String"/>
+        <attribute name="nametraining" optional="YES" attributeType="String"/>
+        <attribute name="start" optional="YES" attributeType="String"/>
+    </entity>
+</model>

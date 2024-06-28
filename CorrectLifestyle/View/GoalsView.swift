@@ -12,63 +12,14 @@ struct GoalsView: View {
         ZStack {
             Color.main
             VStack{
-
                 HStack {
                     //MARK: - water
-                    ZStack {
-                        Color.secondMain
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Water")
-                                    .font(.system(size: 16, weight: .heavy))
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Image(.drop)
-                                    .resizable()
-                                    .frame(width: 16, height: 21)
-                            }
-                            
-                            Spacer()
-                            
-                            Text("2 / 2,5")
-                                .font(.system(size: 12))
-                                .foregroundStyle(.white)
-                            ProgresBarView(max: 2.5, now: 2)
-                        }.padding()
-                    }
-                    .frame(width: 170, height: 113)
-                    .cornerRadius(18)
-                    
+                    WaterGoalView(maxWater: 5, nowWater: 2)
                     Spacer()
-                    
                     //MARK: - Steps
-                    ZStack {
-                        Color.secondMain
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Steps")
-                                    .font(.system(size: 16, weight: .heavy))
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Image(.step)
-                                    .resizable()
-                                    .frame(width: 27, height: 27)
-                            }
-                            
-                            Spacer()
-                            
-                            Text("20.4k / 30k")
-                                .font(.system(size: 12))
-                                .foregroundStyle(.white)
-                            ProgresBarView(max: 30, now: 20.4)
-                        }.padding()
-                    }
-                    .frame(width: 170, height: 113)
-                    .cornerRadius(18)
+                    StepGoalView(maxSteps: 30, nowSteps: 20.4)
                 }
-                
                 Spacer()
-                
                 HStack {
                     //MARK: - Add goal buttom
                     Button(action: {}, label: {
@@ -79,7 +30,9 @@ struct GoalsView: View {
                                 .font(.system(size: 16, weight: .bold))
                         }
                     }).frame(width: 170, height: 67)
+                    
                     Spacer()
+                    
                     //MARK: - Add training buttom
                     Button(action: {}, label: {
                         ZStack {
@@ -95,7 +48,6 @@ struct GoalsView: View {
                         }
                     }).frame(width: 170, height: 67)
                 }
-               
             }
         }
     }

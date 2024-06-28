@@ -21,6 +21,10 @@
 		3099A9DA2C2EDCB0008BC7AC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9D92C2EDCB0008BC7AC /* ViewModel.swift */; };
 		3099A9DC2C2EDDF9008BC7AC /* TrainingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9DB2C2EDDF9008BC7AC /* TrainingsView.swift */; };
 		3099A9DE2C2EDE0D008BC7AC /* CompletedlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9DD2C2EDE0D008BC7AC /* CompletedlsView.swift */; };
+		3099A9E02C2EDFB2008BC7AC /* WaterGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */; };
+		3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */; };
+		3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */; };
+		3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		3099A9D92C2EDCB0008BC7AC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3099A9DB2C2EDDF9008BC7AC /* TrainingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsView.swift; sourceTree = "<group>"; };
 		3099A9DD2C2EDE0D008BC7AC /* CompletedlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedlsView.swift; sourceTree = "<group>"; };
+		3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterGoalView.swift; sourceTree = "<group>"; };
+		3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGoalView.swift; sourceTree = "<group>"; };
+		3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3099A9E72C2EE21A008BC7AC /* CorrectLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorrectLife.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		3099A9B62C2DEBFE008BC7AC /* CorrectLifestyle */ = {
 			isa = PBXGroup;
 			children = (
+				3099A9E32C2EE1D1008BC7AC /* CoreData */,
 				3099A9D82C2EDC9B008BC7AC /* ViewModel */,
 				3099A9CE2C2DEDC0008BC7AC /* Helpers */,
 				3099A9CB2C2DEC23008BC7AC /* View */,
@@ -103,6 +112,8 @@
 				3099A9CF2C2DEDE0008BC7AC /* MainToolbarView.swift */,
 				3099A9D12C2DF26A008BC7AC /* SwitchView.swift */,
 				3099A9D62C2ED667008BC7AC /* ProgresBarView.swift */,
+				3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */,
+				3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -113,6 +124,15 @@
 				3099A9D92C2EDCB0008BC7AC /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3099A9E32C2EE1D1008BC7AC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */,
+				3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,14 +208,18 @@
 			files = (
 				3099A9BC2C2DEBFE008BC7AC /* ViewController.swift in Sources */,
 				3099A9DE2C2EDE0D008BC7AC /* CompletedlsView.swift in Sources */,
+				3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */,
 				3099A9DA2C2EDCB0008BC7AC /* ViewModel.swift in Sources */,
 				3099A9DC2C2EDDF9008BC7AC /* TrainingsView.swift in Sources */,
 				3099A9D72C2ED667008BC7AC /* ProgresBarView.swift in Sources */,
 				3099A9CD2C2DEC44008BC7AC /* MainView.swift in Sources */,
 				3099A9D22C2DF26A008BC7AC /* SwitchView.swift in Sources */,
+				3099A9E02C2EDFB2008BC7AC /* WaterGoalView.swift in Sources */,
 				3099A9B82C2DEBFE008BC7AC /* AppDelegate.swift in Sources */,
 				3099A9D42C2DF5C5008BC7AC /* GoalsView.swift in Sources */,
 				3099A9D02C2DEDE0008BC7AC /* MainToolbarView.swift in Sources */,
+				3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */,
+				3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */,
 				3099A9BA2C2DEBFE008BC7AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +453,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3099A9E72C2EE21A008BC7AC /* CorrectLife.xcdatamodel */,
+			);
+			currentVersion = 3099A9E72C2EE21A008BC7AC /* CorrectLife.xcdatamodel */;
+			name = CorrectLife.xcdatamodeld;
+			path = /Users/roman/Downloads/XcodeProgramm/CorrectLifestyle/CorrectLifestyle/CoreData/CorrectLife.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3099A9AC2C2DEBFE008BC7AC /* Project object */;
 }
