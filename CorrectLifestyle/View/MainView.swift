@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var vm = ViewModel()
     var body: some View {
         ZStack {
+            //MARK: - background
             Color.main.ignoresSafeArea()
             VStack{
+                //MARK: - ToolBar
                MainToolbarView()
-                SwitchView().padding(.vertical)
+                
+                //MARK: - Switch
+                SwitchView(vm: vm).padding(.vertical)
+                
                 Spacer()
-                GoalsView()
+                
+                //MARK: - View
+                switch vm.view {
+                case .Goals: 
+                    GoalsView().padding()
+                case .Trainings:
+                    TrainingsView().padding()
+                case .Completedls:
+                    CompletedlsView().padding()
+                }
             }.ignoresSafeArea()
         }
     }

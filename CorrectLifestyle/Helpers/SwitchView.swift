@@ -7,39 +7,35 @@
 
 import SwiftUI
 
-enum StateSwitch{
-    case Goals
-    case Trainings
-    case Completedls
-}
+
 struct SwitchView: View {
-    @State private var state = StateSwitch.Goals
+    @StateObject var vm: ViewModel
     var body: some View {
         ZStack {
             Color.secondMain
             HStack {
-                Button(action: {state = .Goals}, label: {
+                Button(action: {vm.view = .Goals}, label: {
                     ZStack {
-                        Color(state == .Goals ? .orangeApp : .secondMain)
-                        Text("Goals").foregroundStyle(state == .Goals ? .white : .gray)
+                        Color(vm.view == .Goals ? .orangeApp : .secondMain)
+                        Text("Goals").foregroundStyle(vm.view == .Goals ? .white : .gray)
                     }
                 })
                 .frame(width: 111, height: 38)
                 .cornerRadius(10)
                 
-                Button(action: {state = .Trainings}, label: {
+                Button(action: {vm.view = .Trainings}, label: {
                     ZStack {
-                        Color(state == .Trainings ? .orangeApp : .secondMain)
-                        Text("Trainings").foregroundStyle(state == .Trainings ? .white : .gray)
+                        Color(vm.view == .Trainings ? .orangeApp : .secondMain)
+                        Text("Trainings").foregroundStyle(vm.view == .Trainings ? .white : .gray)
                     }
                 })
                 .frame(width: 111, height: 38)
                 .cornerRadius(10)
                 
-                Button(action: {state = .Completedls}, label: {
+                Button(action: {vm.view = .Completedls}, label: {
                     ZStack {
-                        Color(state == .Completedls ? .orangeApp : .secondMain)
-                        Text("Completedls").foregroundStyle(state == .Completedls ? .white : .gray)
+                        Color(vm.view == .Completedls ? .orangeApp : .secondMain)
+                        Text("Completedls").foregroundStyle(vm.view == .Completedls ? .white : .gray)
                     }
                 })
                 .frame(width: 111, height: 38)
@@ -52,5 +48,5 @@ struct SwitchView: View {
 }
 
 #Preview {
-    SwitchView()
+    SwitchView(vm: ViewModel())
 }
