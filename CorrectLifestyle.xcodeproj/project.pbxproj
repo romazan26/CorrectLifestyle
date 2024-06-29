@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302C4FF02C300BEF006BBC95 /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */; };
+		302C4FF22C30110C006BBC95 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C4FF12C30110C006BBC95 /* Enums.swift */; };
+		302C4FF42C30191A006BBC95 /* DropdownPikerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */; };
 		3099A9B82C2DEBFE008BC7AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9B72C2DEBFE008BC7AC /* AppDelegate.swift */; };
 		3099A9BA2C2DEBFE008BC7AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9B92C2DEBFE008BC7AC /* SceneDelegate.swift */; };
 		3099A9BC2C2DEBFE008BC7AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9BB2C2DEBFE008BC7AC /* ViewController.swift */; };
@@ -25,9 +28,13 @@
 		3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */; };
 		3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */; };
 		3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */; };
+		3099A9EA2C2EEAFA008BC7AC /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E92C2EEAFA008BC7AC /* AddGoalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
+		302C4FF12C30110C006BBC95 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPikerView.swift; sourceTree = "<group>"; };
 		3099A9B42C2DEBFE008BC7AC /* CorrectLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrectLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3099A9B72C2DEBFE008BC7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3099A9B92C2DEBFE008BC7AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 		3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGoalView.swift; sourceTree = "<group>"; };
 		3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3099A9E72C2EE21A008BC7AC /* CorrectLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorrectLife.xcdatamodel; sourceTree = "<group>"; };
+		3099A9E92C2EEAFA008BC7AC /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				3099A9D32C2DF5C5008BC7AC /* GoalsView.swift */,
 				3099A9DB2C2EDDF9008BC7AC /* TrainingsView.swift */,
 				3099A9DD2C2EDE0D008BC7AC /* CompletedlsView.swift */,
+				3099A9E92C2EEAFA008BC7AC /* AddGoalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +123,8 @@
 				3099A9D62C2ED667008BC7AC /* ProgresBarView.swift */,
 				3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */,
 				3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */,
+				302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */,
+				302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				3099A9D92C2EDCB0008BC7AC /* ViewModel.swift */,
+				302C4FF12C30110C006BBC95 /* Enums.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,17 +221,21 @@
 				3099A9BC2C2DEBFE008BC7AC /* ViewController.swift in Sources */,
 				3099A9DE2C2EDE0D008BC7AC /* CompletedlsView.swift in Sources */,
 				3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */,
+				3099A9EA2C2EEAFA008BC7AC /* AddGoalView.swift in Sources */,
+				302C4FF42C30191A006BBC95 /* DropdownPikerView.swift in Sources */,
 				3099A9DA2C2EDCB0008BC7AC /* ViewModel.swift in Sources */,
 				3099A9DC2C2EDDF9008BC7AC /* TrainingsView.swift in Sources */,
 				3099A9D72C2ED667008BC7AC /* ProgresBarView.swift in Sources */,
 				3099A9CD2C2DEC44008BC7AC /* MainView.swift in Sources */,
 				3099A9D22C2DF26A008BC7AC /* SwitchView.swift in Sources */,
 				3099A9E02C2EDFB2008BC7AC /* WaterGoalView.swift in Sources */,
+				302C4FF02C300BEF006BBC95 /* TrainingCellView.swift in Sources */,
 				3099A9B82C2DEBFE008BC7AC /* AppDelegate.swift in Sources */,
 				3099A9D42C2DF5C5008BC7AC /* GoalsView.swift in Sources */,
 				3099A9D02C2DEDE0008BC7AC /* MainToolbarView.swift in Sources */,
 				3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */,
 				3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */,
+				302C4FF22C30110C006BBC95 /* Enums.swift in Sources */,
 				3099A9BA2C2DEBFE008BC7AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

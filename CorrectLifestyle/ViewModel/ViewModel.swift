@@ -5,11 +5,7 @@
 //  Created by Роман on 28.06.2024.
 //
 
-enum StateSwitch{
-    case Goals
-    case Trainings
-    case Completedls
-}
+
 
 import Foundation
 import CoreData
@@ -23,7 +19,12 @@ final class ViewModel: ObservableObject{
     @Published var trainings: [Training] = []
     
     @Published var view = StateSwitch.Goals
+    @Published var selectedDay: DayTraining = .today
     
+    
+    @Published var isPresesentAddGoal = false
+    
+    @Published var simpleDayTraining = ""
     @Published var simpleTrainingName = ""
     @Published var simpleTrainingStart = ""
     @Published var simpleTrainingEnd = ""

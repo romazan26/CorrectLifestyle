@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GoalsView: View {
+    @StateObject var vm: ViewModel
+    
     var body: some View {
         ZStack {
             Color.main
@@ -22,7 +24,7 @@ struct GoalsView: View {
                 Spacer()
                 HStack {
                     //MARK: - Add goal buttom
-                    Button(action: {}, label: {
+                    Button(action: {vm.isPresesentAddGoal.toggle()}, label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 48).foregroundStyle(.orangeApp)
                             Text("Add goal")
@@ -54,5 +56,5 @@ struct GoalsView: View {
 }
 
 #Preview {
-    GoalsView()
+    GoalsView(vm: ViewModel())
 }

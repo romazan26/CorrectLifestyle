@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var vm = ViewModel()
+    
     var body: some View {
         ZStack {
             //MARK: - background
@@ -25,14 +26,17 @@ struct MainView: View {
                 //MARK: - View
                 switch vm.view {
                 case .Goals: 
-                    GoalsView().padding()
+                    GoalsView(vm: vm).padding()
                 case .Trainings:
-                    TrainingsView().padding()
+                    TrainingsView(vm: vm).padding()
                 case .Completedls:
                     CompletedlsView().padding()
                 }
             }.ignoresSafeArea()
         }
+        .sheet(isPresented: $vm.isPresesentAddGoal, content: {
+            AddGoalView(vm: vm)
+        })
     }
 }
 
