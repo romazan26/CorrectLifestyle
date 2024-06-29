@@ -36,7 +36,7 @@ struct GoalsView: View {
                     Spacer()
                     
                     //MARK: - Add training buttom
-                    Button(action: {}, label: {
+                    Button(action: {vm.isPresesentAddTraining.toggle()}, label: {
                         ZStack {
                             Color(.main)
                                 .cornerRadius(48)

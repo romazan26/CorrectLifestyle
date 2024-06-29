@@ -23,6 +23,7 @@ final class ViewModel: ObservableObject{
     
     
     @Published var isPresesentAddGoal = false
+    @Published var isPresesentAddTraining = false
     
     @Published var simpleDayTraining = ""
     @Published var simpleTrainingName = ""

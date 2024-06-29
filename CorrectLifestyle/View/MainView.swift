@@ -34,8 +34,11 @@ struct MainView: View {
                 }
             }.ignoresSafeArea()
         }
+        .sheet(isPresented: $vm.isPresesentAddTraining, content: {
+            AddTrainingView(vm: vm, back: $vm.isPresesentAddTraining)
+        })
         .sheet(isPresented: $vm.isPresesentAddGoal, content: {
-            AddGoalView(vm: vm)
+            AddGoalView(vm: vm, back: $vm.isPresesentAddGoal)
         })
     }
 }

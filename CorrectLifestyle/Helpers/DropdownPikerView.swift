@@ -27,7 +27,7 @@ struct DropdownPikerView: View {
                     Spacer()
                     
                     Image(systemName: "chevron.down")
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.white)
                         .rotationEffect(.init(degrees: showOptions ? -100 : 0))
                     
                 }
