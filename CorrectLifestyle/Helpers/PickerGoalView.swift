@@ -35,7 +35,7 @@ struct PickerGoalView: View {
                         .rotationEffect(.init(degrees: showOptions ? -100 : 0))
                     
                 }
-                //.padding(.horizontal, 15)
+                .padding(.horizontal, 15)
                 .frame(width: size.width, height: size.height)
                 .contentShape(.rect)
                 .onTapGesture {

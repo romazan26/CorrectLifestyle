@@ -34,6 +34,10 @@
 		3099A9EA2C2EEAFA008BC7AC /* AddTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E92C2EEAFA008BC7AC /* AddTrainingView.swift */; };
 		30A832852C31925400E69EE5 /* PickerGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A832842C31925400E69EE5 /* PickerGoalView.swift */; };
 		30A832872C31985A00E69EE5 /* SwiftUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A832862C31985A00E69EE5 /* SwiftUISlider.swift */; };
+		30A832892C31DC3600E69EE5 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A832882C31DC3600E69EE5 /* SettingsButtonView.swift */; };
+		30A8328B2C31DCD000E69EE5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328A2C31DCD000E69EE5 /* SettingsView.swift */; };
+		30A8328F2C31DDB000E69EE5 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328C2C31DDB000E69EE5 /* webView.swift */; };
+		30A832902C31DDB000E69EE5 /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		3099A9E92C2EEAFA008BC7AC /* AddTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingView.swift; sourceTree = "<group>"; };
 		30A832842C31925400E69EE5 /* PickerGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerGoalView.swift; sourceTree = "<group>"; };
 		30A832862C31985A00E69EE5 /* SwiftUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUISlider.swift; sourceTree = "<group>"; };
+		30A832882C31DC3600E69EE5 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		30A8328A2C31DCD000E69EE5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30A8328C2C31DDB000E69EE5 /* webView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
+		30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		3099A9B62C2DEBFE008BC7AC /* CorrectLifestyle */ = {
 			isa = PBXGroup;
 			children = (
+				30A8328E2C31DDB000E69EE5 /* WebView */,
 				3099A9E32C2EE1D1008BC7AC /* CoreData */,
 				3099A9D82C2EDC9B008BC7AC /* ViewModel */,
 				3099A9CE2C2DEDC0008BC7AC /* Helpers */,
@@ -122,6 +131,7 @@
 				3099A9DD2C2EDE0D008BC7AC /* CompletedlsView.swift */,
 				3099A9E92C2EEAFA008BC7AC /* AddTrainingView.swift */,
 				302C4FF92C3033DE006BBC95 /* AddGoalView.swift */,
+				30A8328A2C31DCD000E69EE5 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +150,7 @@
 				302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */,
 				302C4FF72C3032FE006BBC95 /* AddbuttomView.swift */,
 				30A832842C31925400E69EE5 /* PickerGoalView.swift */,
+				30A832882C31DC3600E69EE5 /* SettingsButtonView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -160,6 +171,15 @@
 				3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		30A8328E2C31DDB000E69EE5 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				30A8328C2C31DDB000E69EE5 /* webView.swift */,
+				30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +255,7 @@
 			files = (
 				3099A9BC2C2DEBFE008BC7AC /* ViewController.swift in Sources */,
 				3099A9DE2C2EDE0D008BC7AC /* CompletedlsView.swift in Sources */,
+				30A832902C31DDB000E69EE5 /* WebViewPage.swift in Sources */,
 				3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */,
 				302C4FF62C303177006BBC95 /* CustomTextFieldView.swift in Sources */,
 				3099A9EA2C2EEAFA008BC7AC /* AddTrainingView.swift in Sources */,
@@ -243,6 +264,7 @@
 				3099A9DC2C2EDDF9008BC7AC /* TrainingsView.swift in Sources */,
 				3099A9D72C2ED667008BC7AC /* ProgresBarView.swift in Sources */,
 				302C4FFA2C3033DF006BBC95 /* AddGoalView.swift in Sources */,
+				30A832892C31DC3600E69EE5 /* SettingsButtonView.swift in Sources */,
 				3099A9CD2C2DEC44008BC7AC /* MainView.swift in Sources */,
 				3099A9D22C2DF26A008BC7AC /* SwitchView.swift in Sources */,
 				3099A9E02C2EDFB2008BC7AC /* WaterGoalView.swift in Sources */,
@@ -251,12 +273,14 @@
 				3099A9D42C2DF5C5008BC7AC /* GoalsView.swift in Sources */,
 				30A832852C31925400E69EE5 /* PickerGoalView.swift in Sources */,
 				302C4FF82C3032FE006BBC95 /* AddbuttomView.swift in Sources */,
+				30A8328F2C31DDB000E69EE5 /* webView.swift in Sources */,
 				3099A9D02C2DEDE0008BC7AC /* MainToolbarView.swift in Sources */,
 				3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */,
 				30A832872C31985A00E69EE5 /* SwiftUISlider.swift in Sources */,
 				3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */,
 				302C4FF22C30110C006BBC95 /* Enums.swift in Sources */,
 				3099A9BA2C2DEBFE008BC7AC /* SceneDelegate.swift in Sources */,
+				30A8328B2C31DCD000E69EE5 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

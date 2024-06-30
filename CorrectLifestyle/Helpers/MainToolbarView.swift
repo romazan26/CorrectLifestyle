@@ -20,7 +20,7 @@ struct MainToolbarView: View {
                 }
                 
                     NavigationLink {
-                        
+                        SettingsView()
                     } label: {
                         Image(systemName: "gearshape.fill").foregroundStyle(.gray)
                     }

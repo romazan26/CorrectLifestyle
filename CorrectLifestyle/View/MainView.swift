@@ -11,35 +11,37 @@ struct MainView: View {
     @StateObject var vm = ViewModel()
     
     var body: some View {
-        ZStack {
-            //MARK: - background
-            Color.main.ignoresSafeArea()
-            VStack{
-                //MARK: - ToolBar
-               MainToolbarView()
-                
-                //MARK: - Switch
-                SwitchView(vm: vm).padding(.vertical)
-                
-                Spacer()
-                
-                //MARK: - View
-                switch vm.view {
-                case .Goals: 
-                    GoalsView(vm: vm).padding()
-                case .Trainings:
-                    TrainingsView(vm: vm).padding()
-                case .Completedls:
-                    CompletedlsView().padding()
-                }
-            }.ignoresSafeArea()
+        NavigationView{
+            ZStack {
+                //MARK: - background
+                Color.main.ignoresSafeArea()
+                VStack{
+                    //MARK: - ToolBar
+                   MainToolbarView()
+                    
+                    //MARK: - Switch
+                    SwitchView(vm: vm).padding(.vertical)
+                    
+                    Spacer()
+                    
+                    //MARK: - View
+                    switch vm.view {
+                    case .Goals: 
+                        GoalsView(vm: vm).padding()
+                    case .Trainings:
+                        TrainingsView(vm: vm).padding()
+                    case .Completedls:
+                        CompletedlsView().padding()
+                    }
+                }.ignoresSafeArea()
+            }
+            .sheet(isPresented: $vm.isPresesentAddTraining, content: {
+                AddTrainingView(vm: vm, back: $vm.isPresesentAddTraining)
+            })
+            .sheet(isPresented: $vm.isPresesentAddGoal, content: {
+                AddGoalView(vm: vm, back: $vm.isPresesentAddGoal)
+        })
         }
-        .sheet(isPresented: $vm.isPresesentAddTraining, content: {
-            AddTrainingView(vm: vm, back: $vm.isPresesentAddTraining)
-        })
-        .sheet(isPresented: $vm.isPresesentAddGoal, content: {
-            AddGoalView(vm: vm, back: $vm.isPresesentAddGoal)
-        })
     }
 }
 
