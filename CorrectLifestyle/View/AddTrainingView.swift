@@ -48,7 +48,10 @@ struct AddTrainingView: View {
                 }
                 Spacer()
                 
-                Button(action: {vm.isPresesentAddTraining.toggle()}, label: {
+                //MARK: - Add training button
+                Button(action: {
+                    vm.addTraining()
+                    vm.isPresesentAddTraining.toggle()}, label: {
                     AddbuttomView()
                 })
             }.padding()

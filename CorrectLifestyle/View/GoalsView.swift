@@ -16,12 +16,25 @@ struct GoalsView: View {
             VStack{
                 HStack {
                     //MARK: - water
-                    WaterGoalView(maxWater: 5, nowWater: 2)
+                    ScrollView{
+                        ForEach(vm.goalsWater) { water in
+                            WaterGoalView(vm: vm, water: water)
+                        }
+                        
+                    }
                     Spacer()
                     //MARK: - Steps
-                    StepGoalView(maxSteps: 30, nowSteps: 20.4)
+                    ScrollView{
+                        ForEach(vm.goalsSteps) { steps in
+                            StepGoalView(steps: steps, vm: vm)
+                        }
+                        
+                    }
+                    
                 }
                 Spacer()
+                
+                //MARK: - Grope of AddButton
                 HStack {
                     //MARK: - Add goal buttom
                     Button(action: {vm.isPresesentAddGoal.toggle()}, label: {

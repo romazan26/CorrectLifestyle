@@ -1,5 +1,5 @@
 //
-//  StepGoalView.swift
+//  WaterGoalView.swift
 //  CorrectLifestyle
 //
 //  Created by Роман on 28.06.2024.
@@ -7,30 +7,29 @@
 
 import SwiftUI
 
-struct StepGoalView: View {
-    var maxSteps: Double = 30
-    var nowSteps: Double = 20.4
-    
+struct WaterGoalView: View {
+    @StateObject var vm: ViewModel
+    let water: GoalWater
     var body: some View {
         ZStack {
             Color.secondMain
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Steps")
+                    Text("Water")
                         .font(.system(size: 16, weight: .heavy))
                         .foregroundStyle(.white)
                     Spacer()
-                    Image(.step)
+                    Image(.drop)
                         .resizable()
-                        .frame(width: 27, height: 27)
+                        .frame(width: 16, height: 21)
                 }
                 
                 Spacer()
                 
-                Text("\(nowSteps.formatted())k / \(maxSteps.formatted())k")
+                Text("\(vm.createValueWater(water: water.water)) / \(vm.createValueWater(water: water.maxWater))")
                     .font(.system(size: 12))
                     .foregroundStyle(.white)
-                ProgresBarView(max: maxSteps, now: nowSteps)
+                ProgresBarView(max: water.maxWater, now: water.water)
             }.padding()
         }
         .frame(width: 170, height: 113)
@@ -38,6 +37,6 @@ struct StepGoalView: View {
     }
 }
 
-#Preview {
-    StepGoalView()
-}
+//#Preview {
+//    WaterGoalView(water: W)
+//}

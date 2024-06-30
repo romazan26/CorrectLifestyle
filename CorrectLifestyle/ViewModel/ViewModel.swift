@@ -27,6 +27,9 @@ final class ViewModel: ObservableObject{
     @Published var simpleGoal = ""
     
     @Published var simpleMaxWater = 0.0
+    @Published var simpleWater = 0.0
+    @Published var simpleMaxSteps = 0.0
+    @Published var simpleSteps = 0.0
     
     @Published var simpleTrainingName = ""
     @Published var simpleTrainingStart = ""
@@ -37,7 +40,13 @@ final class ViewModel: ObservableObject{
         getGoalsSteps()
         getTrainings()
     }
-    
+    //MARK: - Create slider data
+    func createValueWater(water: Double) -> String{
+        return String(format: "%.1f", water * 5)
+    }
+    func createValueSteps(staps: Double) -> String{
+        return String(format: "%.1f", staps * 100) 
+    }
     //MARK: - Add data
     func addTraining(){
         let newTraining = Training(context: manager.context)
@@ -46,6 +55,19 @@ final class ViewModel: ObservableObject{
         newTraining.end = simpleTrainingEnd
         newTraining.complited = false
         
+        save()
+    }
+    
+    func addGoalWater(){
+        let newWater = GoalWater(context: manager.context)
+        newWater.maxWater = simpleMaxWater
+        newWater.water = simpleWater
+        save()
+    }
+    func addGoalSteps(){
+        let newSteps = GoalStep(context: manager.context)
+        newSteps.maxSteps = simpleMaxSteps
+        newSteps.steps = simpleSteps
         save()
     }
     

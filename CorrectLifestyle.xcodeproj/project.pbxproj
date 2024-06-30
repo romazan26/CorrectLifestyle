@@ -106,6 +106,7 @@
 		3099A9B62C2DEBFE008BC7AC /* CorrectLifestyle */ = {
 			isa = PBXGroup;
 			children = (
+				30A832912C31F4DE00E69EE5 /* Cells */,
 				30A8328E2C31DDB000E69EE5 /* WebView */,
 				3099A9E32C2EE1D1008BC7AC /* CoreData */,
 				3099A9D82C2EDC9B008BC7AC /* ViewModel */,
@@ -144,9 +145,6 @@
 				3099A9CF2C2DEDE0008BC7AC /* MainToolbarView.swift */,
 				3099A9D12C2DF26A008BC7AC /* SwitchView.swift */,
 				3099A9D62C2ED667008BC7AC /* ProgresBarView.swift */,
-				3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */,
-				3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */,
-				302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */,
 				302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */,
 				302C4FF72C3032FE006BBC95 /* AddbuttomView.swift */,
 				30A832842C31925400E69EE5 /* PickerGoalView.swift */,
@@ -180,6 +178,16 @@
 				30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		30A832912C31F4DE00E69EE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */,
+				3099A9E12C2EE0D4008BC7AC /* StepGoalView.swift */,
+				3099A9DF2C2EDFB2008BC7AC /* WaterGoalView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
