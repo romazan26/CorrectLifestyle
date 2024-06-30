@@ -13,6 +13,32 @@ enum StateSwitch{
     case Completedls
 }
 
+enum Goals: String, CaseIterable, Identifiable {
+    case steps
+    case water
+    
+    var title: String {
+        switch self {
+        case .steps:
+            return "Steps"
+        case .water:
+            return "Water"
+        }
+    }
+    var image: ImageResource {
+        switch self {
+            
+        case .steps:
+            return .step
+        case .water:
+            return .drop
+        }
+    }
+    var id: Self {
+        self
+    }
+}
+
 enum DayTraining: String, CaseIterable, Identifiable {
     case today
     case yesterday

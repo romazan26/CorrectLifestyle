@@ -1,18 +1,18 @@
 //
-//  DropdownPikerView.swift
+//  PickerGoalView.swift
 //  CorrectLifestyle
 //
-//  Created by Роман on 29.06.2024.
+//  Created by Роман on 30.06.2024.
 //
 
 import SwiftUI
 
-
-struct DropdownPikerView: View {
+struct PickerGoalView: View {
     var hint: String
     var maxWidth: CGFloat = 180
     var cornerRadius: CGFloat = 15
     @Binding var selection: String
+    @State var image: ImageResource
     @State private var showOptions = false
     
     var body: some View {
@@ -20,10 +20,14 @@ struct DropdownPikerView: View {
             let size = $0.size
             
             VStack(spacing: 0) {
-                HStack(spacing: 0) {
+                HStack(spacing: 10) {
                     Text(selection == "" ? hint : selection)
                         .foregroundStyle(selection == "" ? .gray : .white)
                         .lineLimit(1)
+                    Image(image)
+                        .resizable()
+                        .frame(width: image == .step ? 20 : 12,
+                               height: image == .step ? 20 : 17)
                     Spacer()
                     
                     Image(systemName: "chevron.down")
@@ -31,7 +35,7 @@ struct DropdownPikerView: View {
                         .rotationEffect(.init(degrees: showOptions ? -100 : 0))
                     
                 }
-                .padding(.horizontal, 15)
+                //.padding(.horizontal, 15)
                 .frame(width: size.width, height: size.height)
                 .contentShape(.rect)
                 .onTapGesture {
@@ -53,7 +57,7 @@ struct DropdownPikerView: View {
     @ViewBuilder
     func Optionsview() -> some View {
         VStack(spacing: 10){
-            ForEach(DayTraining.allCases) { day in
+            ForEach(Goals.allCases) { day in
                 HStack(spacing: 0) {
                     Text(day.title)
                         .lineLimit(1)
@@ -71,6 +75,7 @@ struct DropdownPikerView: View {
                 .onTapGesture {
                     withAnimation(.snappy) {
                         selection = day.title
+                        image = day.image
                         showOptions = false
                     }
                 }
@@ -83,5 +88,5 @@ struct DropdownPikerView: View {
 }
 
 #Preview {
-    DropdownPikerView(hint: "selected", selection: .constant(""))
+    PickerGoalView(hint: "completed", selection: .constant(""), image: .drop)
 }

@@ -25,6 +25,7 @@ struct AddTrainingView: View {
                     Text("New training")
                         .foregroundStyle(.white)
                         .font(.system(size: 20, weight: .heavy))
+                        .padding(.leading, -30)
                     Spacer()
                 }
                 

@@ -32,6 +32,8 @@
 		3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */; };
 		3099A9E82C2EE21A008BC7AC /* CorrectLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E62C2EE21A008BC7AC /* CorrectLife.xcdatamodeld */; };
 		3099A9EA2C2EEAFA008BC7AC /* AddTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A9E92C2EEAFA008BC7AC /* AddTrainingView.swift */; };
+		30A832852C31925400E69EE5 /* PickerGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A832842C31925400E69EE5 /* PickerGoalView.swift */; };
+		30A832872C31985A00E69EE5 /* SwiftUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A832862C31985A00E69EE5 /* SwiftUISlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		3099A9E42C2EE1E6008BC7AC /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3099A9E72C2EE21A008BC7AC /* CorrectLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorrectLife.xcdatamodel; sourceTree = "<group>"; };
 		3099A9E92C2EEAFA008BC7AC /* AddTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingView.swift; sourceTree = "<group>"; };
+		30A832842C31925400E69EE5 /* PickerGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerGoalView.swift; sourceTree = "<group>"; };
+		30A832862C31985A00E69EE5 /* SwiftUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUISlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		3099A9CE2C2DEDC0008BC7AC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				30A832862C31985A00E69EE5 /* SwiftUISlider.swift */,
 				302C4FF52C303177006BBC95 /* CustomTextFieldView.swift */,
 				3099A9CF2C2DEDE0008BC7AC /* MainToolbarView.swift */,
 				3099A9D12C2DF26A008BC7AC /* SwitchView.swift */,
@@ -134,6 +139,7 @@
 				302C4FEF2C300BEF006BBC95 /* TrainingCellView.swift */,
 				302C4FF32C30191A006BBC95 /* DropdownPikerView.swift */,
 				302C4FF72C3032FE006BBC95 /* AddbuttomView.swift */,
+				30A832842C31925400E69EE5 /* PickerGoalView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -243,9 +249,11 @@
 				302C4FF02C300BEF006BBC95 /* TrainingCellView.swift in Sources */,
 				3099A9B82C2DEBFE008BC7AC /* AppDelegate.swift in Sources */,
 				3099A9D42C2DF5C5008BC7AC /* GoalsView.swift in Sources */,
+				30A832852C31925400E69EE5 /* PickerGoalView.swift in Sources */,
 				302C4FF82C3032FE006BBC95 /* AddbuttomView.swift in Sources */,
 				3099A9D02C2DEDE0008BC7AC /* MainToolbarView.swift in Sources */,
 				3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */,
+				30A832872C31985A00E69EE5 /* SwiftUISlider.swift in Sources */,
 				3099A9E52C2EE1E6008BC7AC /* CoreDataManager.swift in Sources */,
 				302C4FF22C30110C006BBC95 /* Enums.swift in Sources */,
 				3099A9BA2C2DEBFE008BC7AC /* SceneDelegate.swift in Sources */,

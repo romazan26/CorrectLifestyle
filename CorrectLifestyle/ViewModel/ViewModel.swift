@@ -19,13 +19,15 @@ final class ViewModel: ObservableObject{
     @Published var trainings: [Training] = []
     
     @Published var view = StateSwitch.Goals
-    @Published var selectedDay: DayTraining = .today
-    
     
     @Published var isPresesentAddGoal = false
     @Published var isPresesentAddTraining = false
     
     @Published var simpleDayTraining = ""
+    @Published var simpleGoal = ""
+    
+    @Published var simpleMaxWater = 0.0
+    
     @Published var simpleTrainingName = ""
     @Published var simpleTrainingStart = ""
     @Published var simpleTrainingEnd = ""
