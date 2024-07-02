@@ -17,7 +17,7 @@ struct MainView: View {
                 Color.main.ignoresSafeArea()
                 VStack{
                     //MARK: - ToolBar
-                   MainToolbarView()
+                    MainToolbarView(vm: vm)
                     
                     //MARK: - Switch
                     SwitchView(vm: vm).padding(.vertical)
@@ -31,7 +31,7 @@ struct MainView: View {
                     case .Trainings:
                         TrainingsView(vm: vm).padding()
                     case .Completedls:
-                        CompletedlsView().padding()
+                        CompletedlsView(vm: vm).padding()
                     }
                 }.ignoresSafeArea()
             }

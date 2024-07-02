@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct MainToolbarView: View {
+    @StateObject var vm: ViewModel
     var body: some View {
         ZStack {
             Color.secondMain
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text("Steps").foregroundStyle(.gray)
-                    Text("20416")
+                    Text(String(format: "%.0f", vm.simpleAllSteps * 100000))
                         .foregroundStyle(.white)
                         .font(.system(size: 87, weight: .heavy))
+                        .minimumScaleFactor(0.5)
+                        
                 }
                 
                     NavigationLink {
@@ -28,11 +31,14 @@ struct MainToolbarView: View {
                 
             }
         }
+        .onAppear(perform: {
+            vm.createAllSteps()
+        })
         .frame(width: 393, height: 233)
         .cornerRadius(21)
     }
 }
 
 #Preview {
-    MainToolbarView()
+    MainToolbarView(vm: ViewModel())
 }

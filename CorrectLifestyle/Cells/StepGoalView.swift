@@ -33,6 +33,9 @@ struct StepGoalView: View {
                 ProgresBarView(max: steps.maxSteps, now: steps.steps)
             }.padding()
         }
+        .onTapGesture {
+            vm.updateStepsData(with: steps.id)
+        }
         .frame(width: 170, height: 113)
         .cornerRadius(18)
     }

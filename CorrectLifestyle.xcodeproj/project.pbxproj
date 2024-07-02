@@ -38,6 +38,7 @@
 		30A8328B2C31DCD000E69EE5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328A2C31DCD000E69EE5 /* SettingsView.swift */; };
 		30A8328F2C31DDB000E69EE5 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328C2C31DDB000E69EE5 /* webView.swift */; };
 		30A832902C31DDB000E69EE5 /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */; };
+		30F2DEAB2C34929F0043057E /* TypeCoachPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2DEAA2C34929E0043057E /* TypeCoachPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		30A8328A2C31DCD000E69EE5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		30A8328C2C31DDB000E69EE5 /* webView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 		30A8328D2C31DDB000E69EE5 /* WebViewPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
+		30F2DEAA2C34929E0043057E /* TypeCoachPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCoachPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				302C4FF72C3032FE006BBC95 /* AddbuttomView.swift */,
 				30A832842C31925400E69EE5 /* PickerGoalView.swift */,
 				30A832882C31DC3600E69EE5 /* SettingsButtonView.swift */,
+				30F2DEAA2C34929E0043057E /* TypeCoachPickerView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				30A832852C31925400E69EE5 /* PickerGoalView.swift in Sources */,
 				302C4FF82C3032FE006BBC95 /* AddbuttomView.swift in Sources */,
 				30A8328F2C31DDB000E69EE5 /* webView.swift in Sources */,
+				30F2DEAB2C34929F0043057E /* TypeCoachPickerView.swift in Sources */,
 				3099A9D02C2DEDE0008BC7AC /* MainToolbarView.swift in Sources */,
 				3099A9E22C2EE0D4008BC7AC /* StepGoalView.swift in Sources */,
 				30A832872C31985A00E69EE5 /* SwiftUISlider.swift in Sources */,

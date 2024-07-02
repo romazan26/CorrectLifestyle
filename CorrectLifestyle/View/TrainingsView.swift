@@ -16,10 +16,18 @@ struct TrainingsView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
                         Text("Today").foregroundStyle(.gray)
-                            TrainingCellView()
+                        ForEach(vm.noComplitedTraining) { trainng in
+                            if trainng.nametraining == DayTraining.today.title {
+                                TrainingCellView(vm: vm, training: trainng)
+                            }
+                        }
 
                         Text("Yesterday").foregroundStyle(.gray)
-                            TrainingCellView()
+                        ForEach(vm.noComplitedTraining) { trainng in
+                            if trainng.nametraining == DayTraining.yesterday.title {
+                                TrainingCellView(vm: vm, training: trainng)
+                            }
+                        }
                         Spacer()
                         //MARK: - bottom toolbar
                        
@@ -56,6 +64,10 @@ struct TrainingsView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            vm.createTraining()
+        })
+        .animation(.smooth, value: vm.noComplitedTraining)
     }
 }
 

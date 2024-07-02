@@ -13,6 +13,23 @@ enum StateSwitch{
     case Completedls
 }
 
+enum TypeOfCoaching: String, CaseIterable, Identifiable {
+    case eveningRun
+    case afternoonWorkout
+    
+    var title: String {
+        switch self {
+        case .eveningRun:
+            return "Evening run"
+        case .afternoonWorkout:
+            return "Afternoon workout"
+        }
+    }
+    var id: Self {
+        self
+    }
+}
+
 enum Goals: String, CaseIterable, Identifiable {
     case steps
     case water

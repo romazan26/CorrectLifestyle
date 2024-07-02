@@ -32,6 +32,9 @@ struct WaterGoalView: View {
                 ProgresBarView(max: water.maxWater, now: water.water)
             }.padding()
         }
+        .onTapGesture {
+            vm.updateWaterData(with: water.id)
+        }
         .frame(width: 170, height: 113)
         .cornerRadius(18)
     }

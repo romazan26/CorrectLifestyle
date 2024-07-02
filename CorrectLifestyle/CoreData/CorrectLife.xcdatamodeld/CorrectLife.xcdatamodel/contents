@@ -13,5 +13,6 @@
         <attribute name="end" optional="YES" attributeType="String"/>
         <attribute name="nametraining" optional="YES" attributeType="String"/>
         <attribute name="start" optional="YES" attributeType="String"/>
+        <attribute name="typeOfCoaching" optional="YES" attributeType="String"/>
     </entity>
 </model>
