@@ -16,7 +16,10 @@ struct AddGoalView: View {
             VStack {
                 //MARK: - Toolbar
                 HStack{
-                    Button(action: {vm.isPresesentAddGoal.toggle()}, label: {
+                    Button(action: {
+                        vm.isPresesentAddGoal.toggle()
+                        vm.clearData()
+                    }, label: {
                         Text("Back")
                             .foregroundStyle(.red)
                     })

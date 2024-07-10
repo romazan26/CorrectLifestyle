@@ -10,6 +10,7 @@ import SwiftUI
 struct AddTrainingView: View {
     @StateObject var vm: ViewModel
     @Binding var back: Bool
+    @FocusState private var keyboardIsFocused: Bool
     var body: some View {
         ZStack {
             Color.main.ignoresSafeArea()
@@ -17,7 +18,10 @@ struct AddTrainingView: View {
                 
                 //MARK: - Toolbar
                 HStack{
-                    Button(action: {vm.isPresesentAddTraining.toggle()}, label: {
+                    Button(action: {
+                        vm.isPresesentAddTraining.toggle()
+                        vm.clearData()
+                    }, label: {
                         Text("Back")
                             .foregroundStyle(.red)
                     })
@@ -52,8 +56,12 @@ struct AddTrainingView: View {
                             .padding()
                         HStack{
                             CustomTextFieldView(placeholder: "Start", text: $vm.simpleTrainingStart)
+                                .keyboardType(.numberPad)
+                                .focused($keyboardIsFocused)
                             Spacer()
                             CustomTextFieldView(placeholder: "Finish", text: $vm.simpleTrainingEnd)
+                                .focused($keyboardIsFocused)
+                                .keyboardType(.numberPad)
                         }
                         Spacer()
                     }.offset(y: 160)
@@ -65,6 +73,8 @@ struct AddTrainingView: View {
                     AddbuttomView()
                 })
             }.padding()
+        }.onTapGesture {
+            keyboardIsFocused = false
         }
     }
 }
