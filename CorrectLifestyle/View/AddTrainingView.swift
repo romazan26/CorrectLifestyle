@@ -55,14 +55,22 @@ struct AddTrainingView: View {
                             .padding(.top, 80)
                             .padding()
                         HStack{
-                            CustomTextFieldView(placeholder: "Start", text: $vm.simpleTrainingStart)
-                                .keyboardType(.numberPad)
-                                .focused($keyboardIsFocused)
-                            Spacer()
-                            CustomTextFieldView(placeholder: "Finish", text: $vm.simpleTrainingEnd)
-                                .focused($keyboardIsFocused)
-                                .keyboardType(.numberPad)
-                        }
+                            DatePicker("Start", selection: $vm.starttraining, displayedComponents: [.hourAndMinute])
+                                .padding(10)
+                                .background {
+                                    Color.gray.opacity(0.6)
+                                        .cornerRadius(10)
+                                        
+                                }
+                                
+                            DatePicker("Finish", selection: $vm.endtraining, displayedComponents: [.hourAndMinute])
+                                .padding(10)
+                                .background {
+                                    Color.gray.opacity(0.6)
+                                        .cornerRadius(10)
+                                        
+                                }
+                        }.foregroundStyle(.white)
                         Spacer()
                     }.offset(y: 160)
                 }

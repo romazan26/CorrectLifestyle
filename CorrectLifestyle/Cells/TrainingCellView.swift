@@ -17,7 +17,7 @@ struct TrainingCellView: View {
                 Text("\(training.typeOfCoaching ?? "")")
                 
                 Spacer()
-                Text("\(training.start ?? "00:00")-\(training.end ?? "00:00")")
+                Text("\(Dateformatter(date: training.timeStart ?? Date()))-\(Dateformatter(date: training.timeEnd ?? Date()))")
             }
             .padding()
             .foregroundStyle(.white)
@@ -28,6 +28,12 @@ struct TrainingCellView: View {
         })
         .frame(width: 356, height: 64)
         .cornerRadius(18)
+    }
+    //MARK: - Dateformatter
+    private func Dateformatter(date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        return dateFormatter.string(from: date)
     }
 }
 

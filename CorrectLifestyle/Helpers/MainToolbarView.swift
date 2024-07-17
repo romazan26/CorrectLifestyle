@@ -12,22 +12,25 @@ struct MainToolbarView: View {
     var body: some View {
         ZStack {
             Color.secondMain
-            HStack(alignment: .top) {
-                VStack(alignment: .leading) {
-                    Text("Steps").foregroundStyle(.gray)
-                    Text(String(format: "%.0f", vm.simpleAllSteps * 100000))
-                        .foregroundStyle(.white)
-                        .font(.system(size: 87, weight: .heavy))
-                        .minimumScaleFactor(0.5)
-                        
-                }
+            VStack{
+            HStack {
+                Text("Steps").foregroundStyle(.gray)
                 
-                    NavigationLink {
-                        SettingsView()
-                    } label: {
-                        Image(systemName: "gearshape.fill").foregroundStyle(.gray)
-                    }
-
+                Spacer()
+                
+                NavigationLink {
+                    SettingsView()
+                } label: {
+                    Image(systemName: "gearshape.fill").foregroundStyle(.gray)
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 50)
+            Text(String(format: "%.0f", vm.simpleAllSteps * 100000))
+                .foregroundStyle(.white)
+                .font(.system(size: 87, weight: .heavy))
+                .minimumScaleFactor(0.5)
+                .padding(.top, -15)
                 
             }
         }

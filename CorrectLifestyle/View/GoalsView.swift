@@ -61,8 +61,9 @@ struct GoalsView: View {
                                 .foregroundStyle(.white)
                                 .font(.system(size: 16, weight: .bold))
                         }
-                    }).frame(width: 170, height: 67)
-                }
+                    })
+                    .frame(width: 170, height: 67)
+                }.padding(.vertical)
             }
         }
     }

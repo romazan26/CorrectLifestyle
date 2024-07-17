@@ -38,6 +38,9 @@ final class ViewModel: ObservableObject{
     @Published var simpleTypeTraining = ""
     @Published var simpleTrainingStart = ""
     @Published var simpleTrainingEnd = ""
+    
+    @Published var starttraining = Date()
+    @Published var endtraining = Date()
 
     init(){
         getGoalsWater()
@@ -143,9 +146,9 @@ final class ViewModel: ObservableObject{
         let newTraining = Training(context: manager.context)
         newTraining.nametraining = simpleDayTraining
         newTraining.typeOfCoaching = simpleTypeTraining
-        newTraining.start = simpleTrainingStart
-        newTraining.end = simpleTrainingEnd
         newTraining.complited = false
+        newTraining.timeStart = starttraining
+        newTraining.timeEnd = endtraining
         
         save()
         

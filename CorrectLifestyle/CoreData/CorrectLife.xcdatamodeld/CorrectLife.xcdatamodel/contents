@@ -10,9 +10,9 @@
     </entity>
     <entity name="Training" representedClassName="Training" syncable="YES" codeGenerationType="class">
         <attribute name="complited" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="end" optional="YES" attributeType="String"/>
         <attribute name="nametraining" optional="YES" attributeType="String"/>
-        <attribute name="start" optional="YES" attributeType="String"/>
+        <attribute name="timeEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="typeOfCoaching" optional="YES" attributeType="String"/>
     </entity>
 </model>
