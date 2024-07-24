@@ -66,7 +66,7 @@ struct SettingsView: View {
             ShareSheet(items: urlShare )
         })
         .sheet(isPresented: $isPresentPolicy, content: {
-            WebViewPage(urlString: URL(string: "https://google.com")!)
+            WebViewPage(urlString: URL(string: "https://telegra.ph/Privacy-Policy-07-24-46")!)
         })
     }
 }
